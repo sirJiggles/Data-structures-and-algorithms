@@ -1,5 +1,5 @@
 /*
-Stacks are Last Item In First item out and we use push and pop
+Stacks are "LIFO" Last Item In First item out and we use push and pop
 it is an array and the only thing you can do is push and pop. like a deck of
 cards, we can add items to the stack, we can only take the top one off
 you cant just take one from the middle.
@@ -37,12 +37,14 @@ go down the rabbit hole, one frame in the stack is one index in the stack
 
 STACK INTERFACE
 protocol Stack {
-  storage: [] // (on constructor)
-  func push(value)
+  storage: string // (on constructor)
+  func push(value: string)
   func pop()
   func size() -> int // (stack size)
 }
 
+here is a stack implemented as requested by the course. need to implement
+interface based on a storage string
 */
 class Stack {
   constructor(initialValue = '') {
@@ -74,6 +76,3 @@ console.log('------------------------------------');
 console.log(test.size());
 console.log(test.storage);
 console.log('------------------------------------');
-
-
-
